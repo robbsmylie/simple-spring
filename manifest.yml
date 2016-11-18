@@ -1,0 +1,4 @@
+---
+applications:
+- name: simple-spring
+  memory: 512MB
