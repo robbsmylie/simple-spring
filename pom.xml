@@ -46,7 +46,7 @@
 				<configuration>
 					<warName>${name}</warName>
 					<outputDirectory>target</outputDirectory>
-					<outputDirectory>../../../Docker.Deployments/simple-spring</outputDirectory>
+					<!--outputDirectory>../../../Docker.Deployments/simple-spring</outputDirectory-->
 				</configuration>
 			</plugin>
 		</plugins>

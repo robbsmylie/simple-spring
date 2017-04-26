@@ -11,11 +11,15 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @RestController
 @SpringBootApplication
 public class SimpleApp extends SpringBootServletInitializer {
 
+	static final Logger LOG = LoggerFactory.getLogger(SimpleApp.class);
+	
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
     	
@@ -37,6 +41,15 @@ public class SimpleApp extends SpringBootServletInitializer {
     @RequestMapping("/")
     String home() {
         System.out.println("/ called, returning Hello World");
-        return "Hello World!";
+        LOG.debug("/ called, returning Hello World");
+        return "resourve '/' - Hello World!";
     }
+
+    @RequestMapping("/index")
+    String index() {
+        System.out.println("index called, returning index");
+        LOG.debug("index called, returning index");
+        return "resource 'index' returned";
+    }
+
 }
